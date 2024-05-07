@@ -8,15 +8,5 @@ namespace DAL
 {
     public class clsConnection
     {
-        public static string getConnectionString()
-        {
-            string dbName =
-                    "server=alessandroleotta.database.windows.net;" +
-                    "database=alessandroDB;" +
-                    "Uid=prueba;" +
-                    "pwd=fernandoG321;" +
-                    "trustServerCertificate = true";
-            return dbName;
-        }
     }
 }
