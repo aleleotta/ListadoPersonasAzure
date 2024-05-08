@@ -1,12 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entities
+﻿namespace Entities
 {
-    internal class clsDepartamento
+    public class clsDepartamento
     {
+        #region Attributes
+        private int id = 0;
+        private string nombreDept = "";
+        #endregion
+
+        #region Properties
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+        public string NombreDept
+        {
+            get
+            {
+                return nombreDept;
+            }
+            set
+            {
+                if (value != null)
+                {
+                    nombreDept = value;
+                }
+            }
+        }
+        #endregion
+
+        #region Constructors
+        public clsDepartamento() { }
+
+        public clsDepartamento(int id, string nombreDept)
+        {
+            this.id = id;
+            this.nombreDept = nombreDept;
+        }
+
+        public clsDepartamento(clsDepartamento dept)
+        {
+            this.id = dept.Id;
+            this.nombreDept = dept.nombreDept;
+        }
+        #endregion
     }
 }
